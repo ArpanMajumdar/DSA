@@ -23,7 +23,10 @@ public class Main {
 //        MergeSortDemo.mergeSortUtil(arrAfterSort);
 
         //Heap sort
-        HeapSortDemo.heapSort(arrAfterSort);
+//        HeapSortDemo.heapSort(arrAfterSort);
+
+        //Quick sort demo
+        QuickSortDemo.quickSortUtil(arrAfterSort);
 
 
 //        System.out.println("After sorting:");

@@ -1,5 +1,7 @@
 package sorting;
 
+import util.ArrayUtil;
+
 import java.util.Arrays;
 
 public class BubbleSortDemo {
@@ -13,7 +15,7 @@ public class BubbleSortDemo {
             flag = false;
             for (int j = 1; j < N - i; j++) {
                 if (arr[j] < arr[j - 1]) {
-                    swap(arr, j, j - 1);
+                    ArrayUtil.swap(arr, j, j - 1);
                     flag = true;
                 }
             }
@@ -23,10 +25,6 @@ public class BubbleSortDemo {
         }
     }
 
-    private static void swap(int[] arr, int index1, int index2) {
-        int temp = arr[index1];
-        arr[index1] = arr[index2];
-        arr[index2] = temp;
-    }
+
 
 }

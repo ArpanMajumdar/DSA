@@ -28,7 +28,7 @@ public class HeapSortDemo {
             largest = right;
         }
         if (largest < heapSize && largest != i) {
-            swap(arr, largest, i);
+            ArrayUtil.swap(arr, largest, i);
             maxHeapify(arr, largest, heapSize);
         }
     }
@@ -45,15 +45,9 @@ public class HeapSortDemo {
         int heapSize = arr.length;
         buildMaxHeap(arr);
         for (int i = arr.length - 1; i > 0; i--) {
-            swap(arr, 0, i);
+            ArrayUtil.swap(arr, 0, i);
             heapSize--;
             maxHeapify(arr, 0, heapSize);
         }
-    }
-
-    private static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
 }
