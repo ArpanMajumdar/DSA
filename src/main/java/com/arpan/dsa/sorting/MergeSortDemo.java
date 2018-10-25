@@ -1,4 +1,4 @@
-package sorting;
+package com.arpan.dsa.sorting;
 
 public class MergeSortDemo {
 

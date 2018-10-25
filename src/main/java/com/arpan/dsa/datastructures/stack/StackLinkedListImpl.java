@@ -1,6 +1,6 @@
-package datastructures.stack;
+package com.arpan.dsa.datastructures.stack;
 
-import exceptions.StackUnderflowException;
+import com.arpan.dsa.exceptions.StackUnderflowException;
 
 import java.util.LinkedList;
 import java.util.List;

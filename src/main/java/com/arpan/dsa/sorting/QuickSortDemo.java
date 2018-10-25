@@ -1,6 +1,6 @@
-package sorting;
+package com.arpan.dsa.sorting;
 
-import util.ArrayUtil;
+import com.arpan.dsa.util.ArrayUtil;
 
 public class QuickSortDemo {
 

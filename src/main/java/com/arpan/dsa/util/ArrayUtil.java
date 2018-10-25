@@ -1,4 +1,4 @@
-package util;
+package com.arpan.dsa.util;
 
 import java.util.Arrays;
 

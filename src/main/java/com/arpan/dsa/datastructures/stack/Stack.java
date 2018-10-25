@@ -1,4 +1,4 @@
-package datastructures.stack;
+package com.arpan.dsa.datastructures.stack;
 
 public interface Stack {
 

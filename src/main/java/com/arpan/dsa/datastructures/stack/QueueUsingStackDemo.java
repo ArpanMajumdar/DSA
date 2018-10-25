@@ -1,6 +1,6 @@
-package datastructures.stack;
+package com.arpan.dsa.datastructures.stack;
 
-import datastructures.queue.Queue;
+import com.arpan.dsa.datastructures.queue.Queue;
 
 public class QueueUsingStackDemo {
 

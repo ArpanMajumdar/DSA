@@ -1,6 +1,4 @@
-package sorting;
-
-import java.util.Arrays;
+package com.arpan.dsa.sorting;
 
 public class InsertionSortDemo {
 

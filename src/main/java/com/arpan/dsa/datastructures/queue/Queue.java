@@ -1,4 +1,4 @@
-package datastructures.queue;
+package com.arpan.dsa.datastructures.queue;
 
 public interface Queue {
 

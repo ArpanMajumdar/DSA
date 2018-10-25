@@ -1,7 +1,7 @@
-package datastructures.stack;
+package com.arpan.dsa.datastructures.stack;
 
-import datastructures.queue.Queue;
-import exceptions.QueueUnderflowException;
+import com.arpan.dsa.datastructures.queue.Queue;
+import com.arpan.dsa.exceptions.QueueUnderflowException;
 
 public class QueueUsingStack implements Queue {
 

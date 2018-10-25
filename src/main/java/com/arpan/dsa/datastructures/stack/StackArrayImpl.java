@@ -1,7 +1,7 @@
-package datastructures.stack;
+package com.arpan.dsa.datastructures.stack;
 
-import exceptions.StackOverflowException;
-import exceptions.StackUnderflowException;
+import com.arpan.dsa.exceptions.StackOverflowException;
+import com.arpan.dsa.exceptions.StackUnderflowException;
 
 public class StackArrayImpl implements Stack {
 

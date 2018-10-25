@@ -1,8 +1,6 @@
-package sorting;
+package com.arpan.dsa.sorting;
 
-import util.ArrayUtil;
-
-import java.util.Arrays;
+import com.arpan.dsa.util.ArrayUtil;
 
 public class BubbleSortDemo {
 

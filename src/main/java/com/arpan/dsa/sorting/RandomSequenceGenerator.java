@@ -1,4 +1,4 @@
-package sorting;
+package com.arpan.dsa.sorting;
 
 import java.util.Random;
 

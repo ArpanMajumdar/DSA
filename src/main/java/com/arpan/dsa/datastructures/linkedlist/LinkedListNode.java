@@ -1,4 +1,4 @@
-package datastructures.linkedlist;
+package com.arpan.dsa.datastructures.linkedlist;
 
 class LinkedListNode {
     int data;
