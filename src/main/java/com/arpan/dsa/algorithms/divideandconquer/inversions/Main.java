@@ -1,6 +1,6 @@
-package com.arpan.dsa.divideandconquer.inversions;
+package com.arpan.dsa.algorithms.divideandconquer.inversions;
 
-import com.arpan.dsa.sorting.RandomSequenceGenerator;
+import com.arpan.dsa.algorithms.sorting.RandomSequenceGenerator;
 
 import java.util.Arrays;
 

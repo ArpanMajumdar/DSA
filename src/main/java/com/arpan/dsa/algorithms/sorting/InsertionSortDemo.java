@@ -1,4 +1,4 @@
-package com.arpan.dsa.sorting;
+package com.arpan.dsa.algorithms.sorting;
 
 public class InsertionSortDemo {
 

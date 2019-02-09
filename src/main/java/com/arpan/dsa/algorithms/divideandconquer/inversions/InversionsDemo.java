@@ -1,6 +1,4 @@
-package com.arpan.dsa.divideandconquer.inversions;
-
-import java.util.Arrays;
+package com.arpan.dsa.algorithms.divideandconquer.inversions;
 
 public class InversionsDemo {
 

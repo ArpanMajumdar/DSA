@@ -1,4 +1,4 @@
-package com.arpan.dsa.sorting;
+package com.arpan.dsa.algorithms.sorting;
 
 import java.util.Arrays;
 
@@ -10,7 +10,7 @@ public class Main {
 //        int[] arrBeforeSort = {79, 69, 32, 64, 64, 93, 18, 4, 51, 81};
         int[] arrAfterSort = Arrays.copyOf(arrBeforeSort, arrBeforeSort.length);
 
-//        System.out.println("Before com.arpan.dsa.sorting:");
+//        System.out.println("Before com.arpan.dsa.algorithms.sorting:");
 //        Arrays.stream(arrBeforeSort).forEach(System.out::println);
 
         //Insertion sort
@@ -29,7 +29,7 @@ public class Main {
         QuickSortDemo.quickSortUtil(arrAfterSort);
 
 
-//        System.out.println("After com.arpan.dsa.sorting:");
+//        System.out.println("After com.arpan.dsa.algorithms.sorting:");
 //        Arrays.stream(arrAfterSort).forEach(System.out::println);
 
         Arrays.sort(arrBeforeSort);
