@@ -1,4 +1,4 @@
-package com.arpan.dsa.integermultiplication;
+package com.arpan.dsa.divideandconquer.integermultiplication;
 
 import java.math.BigInteger;
 
