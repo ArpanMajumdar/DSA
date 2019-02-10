@@ -11,4 +11,8 @@ public interface Graph {
   void performBreadthFirstTraversal(int src);
 
   void performDepthFirstTraversal(int src);
+
+  boolean isCyclic();
+
+  void performTopologicalSort();
 }

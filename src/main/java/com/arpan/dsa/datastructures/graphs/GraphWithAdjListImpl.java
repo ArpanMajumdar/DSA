@@ -2,8 +2,10 @@ package com.arpan.dsa.datastructures.graphs;
 
 import com.arpan.dsa.exceptions.GraphVertexDosNotExistException;
 
+import java.util.Deque;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.LinkedBlockingQueue;
 
 public class GraphWithAdjListImpl implements Graph {
@@ -83,6 +85,14 @@ public class GraphWithAdjListImpl implements Graph {
     boolean[] visited = new boolean[this.numVertices];
     System.out.println("Performing depth first traversal starting from vertex " + src);
     depthFirstTraversalUtil(src, visited);
+
+    // This is required to cover any remaining vertices that are not reachable via given source
+    // vertex
+    for (int i = 0; i < this.numVertices; i++) {
+      if (!visited[i]) {
+        depthFirstTraversalUtil(i, visited);
+      }
+    }
   }
 
   private void depthFirstTraversalUtil(int currentVertex, boolean[] visited) {
@@ -98,5 +108,86 @@ public class GraphWithAdjListImpl implements Graph {
         depthFirstTraversalUtil(neighbour, visited);
       }
     }
+  }
+
+  @Override
+  public boolean isCyclic() {
+    // Create visited and isVertexPartOfRecursionStack arrays and initialize with false
+    boolean[] visited = new boolean[this.numVertices];
+    boolean[] isVertexPartOfRecursionStack = new boolean[this.numVertices];
+
+    // Perform BFS from each vertex.If isCyclicUtil() returns true, for any index there is a cycle.
+    for (int i = 0; i < this.numVertices; i++) {
+      if (isCyclicUtil(i, visited, isVertexPartOfRecursionStack)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  private boolean isCyclicUtil(
+      int currentVertex, boolean[] visited, boolean[] isVertexInRecursionStack) {
+
+    // If vertex is also in the recursion stack, we are visiting it again and there is a cycle
+    // present.
+    if (isVertexInRecursionStack[currentVertex]) return true;
+
+    // If vertex is already visited, no need to visit
+    if (visited[currentVertex]) return false;
+
+    // Mark this vertex visited and a part of recursion stack
+    visited[currentVertex] = true;
+    isVertexInRecursionStack[currentVertex] = true;
+
+    // Recursively perform DFS on its neighbours and check for cycle
+    for (int neighbour : this.adjListArray[currentVertex]) {
+      if (isCyclicUtil(neighbour, visited, isVertexInRecursionStack)) return true;
+    }
+
+    // Remove current vertex from recursion stack, as we are done visiting.
+    isVertexInRecursionStack[currentVertex] = false;
+
+    return false;
+  }
+
+  @Override
+  public void performTopologicalSort() {
+    // Mark all vertices as not visited
+    boolean[] visited = new boolean[this.numVertices];
+
+    // Initialize stack
+    Deque<Integer> recursionStack = new LinkedBlockingDeque<>();
+
+    // Call topologicalSortUtil() for all vertices which are not yet visited
+    for (int vertex = 0; vertex < this.numVertices; vertex++) {
+      if (!visited[vertex]) {
+        topologicalSortUtil(vertex, visited, recursionStack);
+      }
+    }
+
+    // Print the topological sort
+    System.out.println("Topological sorting of given graph:");
+    while (!recursionStack.isEmpty()) {
+      System.out.print(recursionStack.pop() + ", ");
+    }
+    System.out.println();
+  }
+
+  private void topologicalSortUtil(
+      int currentVertex, boolean[] visited, Deque<Integer> recursionStack) {
+    // Mark the current vertex as visited
+    visited[currentVertex] = true;
+
+    // Iterate through all neighbours of current vertex
+    for (int neighbour : this.adjListArray[currentVertex]) {
+      // If neighbour is not visited
+      if (!visited[neighbour]) {
+        // Recursively traverse its neighbours
+        topologicalSortUtil(neighbour, visited, recursionStack);
+      }
+    }
+
+    // Push the current vertex to the recursion stack
+    recursionStack.push(currentVertex);
   }
 }
