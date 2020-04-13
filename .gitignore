@@ -28,3 +28,4 @@ out
 DSA.iml
 .DS_store
 *.iml
+.gradle
