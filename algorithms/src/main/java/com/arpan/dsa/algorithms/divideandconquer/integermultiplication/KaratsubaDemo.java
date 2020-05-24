@@ -14,7 +14,8 @@ public class KaratsubaDemo {
     } else {
       // x = 10^p * a + b
       // y = 10^q * c + d
-      // x * y = [10^(p+q) * (a * c)] + [10^p * (a * d)] + [10^q * (b * c)] + [(b * d)]
+      // x * y = [10^(p+q) * (a * c)] + [10^p * (a * d)] + [10^q * (b * c)] + [(b *
+      // d)]
       int p = m / 2;
       int q = n / 2;
 

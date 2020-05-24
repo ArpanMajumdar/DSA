@@ -56,3 +56,10 @@ To merge components containing `p` and `q`, change all entries whose id equals `
 - **Find:** O(1)
 - **Union:** O(N)
 
+### Quick-union (lazy approach)
+
+#### Data structure
+
+- Integer array `id[]` of size N
+- We assume that `id[i]` is the parent of `i`.
+- To find the root we recursively find `parent(i)` until we have `id[i] == i`.
