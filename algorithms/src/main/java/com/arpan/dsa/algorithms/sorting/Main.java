@@ -34,7 +34,7 @@ public class Main {
 
         Arrays.sort(arrBeforeSort);
         if (Arrays.equals(arrBeforeSort, arrAfterSort)) {
-            System.out.println("Sorting successfull... YO BITCH!!");
+            System.out.println("Sorting successful... YO BITCH!!");
         } else {
             System.out.println("FUUUUUUUK... :(");
         }

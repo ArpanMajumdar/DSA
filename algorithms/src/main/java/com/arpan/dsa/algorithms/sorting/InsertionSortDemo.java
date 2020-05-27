@@ -2,20 +2,19 @@ package com.arpan.dsa.algorithms.sorting;
 
 public class InsertionSortDemo {
 
-    public static void insertionSort(int[] arr){
+    public void insertionSort(int[] arr) {
+        if (arr.length <= 1) return;
 
-        if(arr.length>1){
-            int key,j;
-            for(int i=1;i<arr.length;i++){
-                key=arr[i];
-                j=i-1;
+        int key;
+        int j;
+        for (int i = 1; i < arr.length; i++) {
+            key = arr[i];
 
-                while (j>=0 && arr[j]>key){
-                    arr[j+1]=arr[j];
-                    j--;
-                }
-                arr[j+1]=key;
+            for (j = i - 1; j >= 0 && arr[j] > key; j--) {
+                arr[j + 1] = arr[j];
             }
+            arr[j + 1] = key;
         }
+
     }
 }

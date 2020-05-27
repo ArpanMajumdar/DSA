@@ -10,9 +10,17 @@ repositories {
 }
 
 dependencies {
-    testCompile("junit", "junit", "4.12")
+    testImplementation("org.junit.jupiter", "junit-jupiter", "5.6.2")
+    testImplementation("org.junit.jupiter", "junit-jupiter-api", "5.6.2")
 }
 
 configure<JavaPluginConvention> {
     sourceCompatibility = JavaVersion.VERSION_1_8
+}
+
+tasks.test {
+    useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
 }

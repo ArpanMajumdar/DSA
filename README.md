@@ -2,7 +2,7 @@
 
 This repository contains my self implemented data structutres and algorithms for quick revision.
 
-## Algorithms to prepare for interview
+## Data structures
 
 ### Array
 
@@ -77,3 +77,7 @@ This repository contains my self implemented data structutres and algorithms for
 
 1. [Integer to English Words](https://leetcode.com/problems/integer-to-english-words/)
 2. [Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)
+
+## Algorithms
+
+ 

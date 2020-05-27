@@ -1,2 +1,2 @@
-rootProject.name = "DSA"
+rootProject.name = "algorithms"
 

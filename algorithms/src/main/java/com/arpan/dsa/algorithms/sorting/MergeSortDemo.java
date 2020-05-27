@@ -2,21 +2,21 @@ package com.arpan.dsa.algorithms.sorting;
 
 public class MergeSortDemo {
 
-    public static void mergeSortUtil(int[] arr) {
-        mergeSort(arr,0,arr.length-1);
+    public void mergeSort(int[] arr) {
+        mergeSortUtil(arr, 0, arr.length - 1);
     }
 
-    public static void mergeSort(int[] arr, int beg, int end) {
+    public void mergeSortUtil(int[] arr, int beg, int end) {
         if (beg < end) {
             int mid = (beg + end) / 2;
 
-            mergeSort(arr, beg, mid);
-            mergeSort(arr, mid + 1, end);
+            mergeSortUtil(arr, beg, mid);
+            mergeSortUtil(arr, mid + 1, end);
             merge(arr, beg, mid, end);
         }
     }
 
-    public static void merge(int[] arr, int beg, int mid, int end) {
+    public void merge(int[] arr, int beg, int mid, int end) {
         //l1[beg..mid]
         int l1 = mid - beg + 1;
 
