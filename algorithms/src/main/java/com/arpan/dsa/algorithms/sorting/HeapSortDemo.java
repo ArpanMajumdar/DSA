@@ -4,19 +4,19 @@ import com.arpan.dsa.util.ArrayUtil;
 
 public class HeapSortDemo {
 
-    private static int getParent(int i) {
+    private int getParent(int i) {
         return (i - 1) / 2;
     }
 
-    private static int getLeftChild(int i) {
+    private int getLeftChild(int i) {
         return 2 * i + 1;
     }
 
-    private static int getRightChild(int i) {
+    private int getRightChild(int i) {
         return 2 * i + 2;
     }
 
-    private static void maxHeapify(int[] arr, int i, int heapSize) {
+    public void maxHeapify(int[] arr, int i, int heapSize) {
         int left = getLeftChild(i);
         int right = getRightChild(i);
         int largest = i;
@@ -33,7 +33,7 @@ public class HeapSortDemo {
         }
     }
 
-    private static void buildMaxHeap(int[] arr) {
+    public void buildMaxHeap(int[] arr) {
         int heapSize = arr.length;
 
         for (int i = (heapSize - 1) / 2; i >= 0; i--) {
@@ -41,7 +41,7 @@ public class HeapSortDemo {
         }
     }
 
-    public static void heapSort(int[] arr) {
+    public void heapSort(int[] arr) {
         int heapSize = arr.length;
         buildMaxHeap(arr);
         for (int i = arr.length - 1; i > 0; i--) {
