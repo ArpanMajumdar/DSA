@@ -4,7 +4,7 @@ import com.arpan.dsa.util.ArrayUtil;
 
 public class QuickSortDemo {
 
-    private static int partition(int[] arr, int beg, int end) {
+    public int partition(int[] arr, int beg, int end) {
         int pivot = arr[end];
         int i = beg - 1;
 
@@ -18,17 +18,17 @@ public class QuickSortDemo {
         return i + 1;
     }
 
-    private static void quickSort(int[] arr, int beg, int end) {
+    private void quickSortUtil(int[] arr, int beg, int end) {
         if (beg < end) {
             int pivotIndex = partition(arr, beg, end);
-            quickSort(arr, beg, pivotIndex - 1);
-            quickSort(arr, pivotIndex + 1, end);
+            quickSortUtil(arr, beg, pivotIndex - 1);
+            quickSortUtil(arr, pivotIndex + 1, end);
         }
     }
 
-    public static void quickSortUtil(int[] arr) {
+    public void quickSort(int[] arr) {
         if (arr.length > 1) {
-            quickSort(arr, 0, arr.length - 1);
+            quickSortUtil(arr, 0, arr.length - 1);
         }
     }
 }

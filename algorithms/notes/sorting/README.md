@@ -147,7 +147,8 @@ fun buildMaxHeap(A)
 - Heapsort algorithm start by using `buildMaxHeap()` on th einput array `A[1..n]`.
 - Since max element is stored at the root `A[1]` we can put it in its final correct position by exchanging it with A[n].
 - We now discard node n from heap by decrementing the `A.heapSize`.
-- The new root may violate the heap property. To restore the max-heap property, call `maxHeapify()` which creates a max heap in `A[1..n-1]`.
+- The new root may violate the heap property. To restore the max-heap property, call `maxHeapify()` which creates a max 
+heap in `A[1..n-1]`.
 - Repeat this process for the max-heap of size `n-1` down to heap size of `2`.
 
 ```
@@ -158,4 +159,34 @@ fun heapSort(A)
         exchange A[1] with A[i]
         A.heapSize = A.heapSIze - 1
         maxHeapify(A, 1)
+```
+
+## Quick sort
+
+Quick sort like merge sort applies the divide and conquer paradigm.
+
+1. **Divide** - Partition the array `A[p..r]` into two(possibly empty) subarrays `A[p..q-1]` and `A[q+1..r]` such that 
+each element of `A[p..q-1]` is less than or equal to `A[q]` which in turn is less than or equal to each element of `A[q+1..r]`.
+2. **Conquer** - Sort the two subarrays `A[p..q-1]` and `A[q+1..r]` by recursive calls to quick sort.
+3. **Combine** - Because subarrays are already sorted, no work is needed to combine them i.e. entire array `A[p..r]` is sorted.
+
+```
+fun quickSort(A, p, r)
+    if p < r
+        q = partition(A, p, r)
+        quickSort(A, p, q-1)
+        quickSort(A, q+1, r)
+
+fun partition(A, p, r)
+    pivot = A[r]
+    
+    i = p - 1
+    
+    for j = p to r-1
+        if A[j] <= pivot
+            i = i + 1
+            exchange A[i] with A[j]
+    
+    exhange A[i + 1] with pivot
+    return i + 1
 ```
