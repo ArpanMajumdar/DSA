@@ -8,4 +8,5 @@
 - [x] 383. [Ransom note](src/main/java/com/arpan/leetcode/ransomnote/RansomNoteSolution.java)
 - [x] 387. [First Unique Character in a String](src/main/java/com/arpan/leetcode/firstuniquecharacter/FirstUniqueCharacterSolution.java)
 - [x] 441. [Arranging coins](src/main/java/com/arpan/leetcode/arrangingcoins/ArrangingCoinsSolution.java)
+- [x] 461. [Hamming Distance](src/main/java/com/arpan/leetcode/hammingdistance/HammingDistanceSolution.java)
 - [x] 771. [Jewels and stones](src/main/java/com/arpan/leetcode/jewelsandstones/JewelsAndStonesSolution.java)
