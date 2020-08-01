@@ -1,7 +1,10 @@
 # Leetcode solutions
 
+- [x] 66.  [Plus One](src/main/java/com/arpan/leetcode/plusone/PlusOneSolution.java)
 - [x] 107. [Binary Tree Level Order Traversal II](src/main/java/com/arpan/leetcode/binarytreelevelordertraversal2/BinaryTreeLevelOrderTraversal2.java)
+- [x] 136. [Single Number](src/main/java/com/arpan/leetcode/singlenumber/SingleNumberSolution.java)
 - [x] 169. [Majority Element](src/main/java/com/arpan/leetcode/majorityelement/MajorityElementSolution.java)
+- [x] 202. [Happy Number](src/main/java/com/arpan/leetcode/happynumber/HappyNumberSolution.java)
 - [x] 226. [Invert Binary Tree](src/main/java/com/arpan/leetcode/invertbinarytree/InvertBinaryTreeSolution.java)
 - [x] 237. [Delete Node in a Linked List](src/main/java/com/arpan/leetcode/deletenodeinlinkedlist/DeleteNodeInLinkedListSolution.java)
 - [x] 278. [First bad version](src/main/java/com/arpan/leetcode/firstbadversion/FirstBadVersionSolution.java)
@@ -9,4 +12,5 @@
 - [x] 387. [First Unique Character in a String](src/main/java/com/arpan/leetcode/firstuniquecharacter/FirstUniqueCharacterSolution.java)
 - [x] 441. [Arranging coins](src/main/java/com/arpan/leetcode/arrangingcoins/ArrangingCoinsSolution.java)
 - [x] 461. [Hamming Distance](src/main/java/com/arpan/leetcode/hammingdistance/HammingDistanceSolution.java)
+- [x] 463. [Island Perimeter](src/main/java/com/arpan/leetcode/islandperimeter/IslandPerimeterSolution.java)
 - [x] 771. [Jewels and stones](src/main/java/com/arpan/leetcode/jewelsandstones/JewelsAndStonesSolution.java)
