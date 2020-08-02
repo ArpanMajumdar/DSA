@@ -1,5 +1,6 @@
 # Leetcode solutions
 
+- [x] 53.  [Maximum Subarray](src/main/java/com/arpan/leetcode/maximumsubarray/MaximumSubArraySolution.java)
 - [x] 66.  [Plus One](src/main/java/com/arpan/leetcode/plusone/PlusOneSolution.java)
 - [x] 107. [Binary Tree Level Order Traversal II](src/main/java/com/arpan/leetcode/binarytreelevelordertraversal2/BinaryTreeLevelOrderTraversal2.java)
 - [x] 136. [Single Number](src/main/java/com/arpan/leetcode/singlenumber/SingleNumberSolution.java)
