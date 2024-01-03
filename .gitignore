@@ -31,3 +31,4 @@ DSA.iml
 .gradle
 build
 .vscode
+venv
