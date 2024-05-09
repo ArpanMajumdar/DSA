@@ -5,7 +5,7 @@ class TreeNode:
     def __init__(
         self, val: int, left_val: Optional[int] = None, right_val: Optional[int] = None
     ) -> None:
-        self.val = val
+        self.val = val  
         self.left = TreeNode(left_val) if left_val is not None else None
         self.right = TreeNode(right_val) if right_val is not None else None
 

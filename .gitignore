@@ -32,3 +32,4 @@ DSA.iml
 build
 .vscode
 venv
+.venv
