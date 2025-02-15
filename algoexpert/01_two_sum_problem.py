@@ -9,9 +9,11 @@ def two_sum_hashmap_method(
     arr_set = set()
     for x in arr:
         y = target_sum - x
-        if y in arr_set: # If the diff between target sum and curr element exists in the set, then we are done.
+        if (
+            y in arr_set
+        ):  # If the diff between target sum and curr element exists in the set, then we are done.
             return x, y
-        else: # Store the current num in set
+        else:  # Store the current num in set
             arr_set.add(x)
     return None
 

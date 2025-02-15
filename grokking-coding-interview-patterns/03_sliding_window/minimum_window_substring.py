@@ -6,8 +6,8 @@
 # Constraints: Strings s and t consist of uppercase and lowercase English characters.
 
 # Solution
-# 1. Initialize two hash maps: t_freq_map to store the character frequency counts of string t and curr_window_freq_map to store the char frequency 
-# 2. Iterate over s using a sliding window with start and end pointers and perform the following steps 
+# 1. Initialize two hash maps: t_freq_map to store the character frequency counts of string t and curr_window_freq_map to store the char frequency
+# 2. Iterate over s using a sliding window with start and end pointers and perform the following steps
 #   2.1 If current char is in t, update its frequency in curr_window_freq_map
 #   2.2 Check if the freq of all the chars in curr_window_freq_map >= freq of all the chars in t_freq_map. Keep shrinking the window until this condition holds true.
 #   2.3 Keep track of the min_window_len for which the condition is true. If we get a smaller window, then update the min_window_len and min_window_substr
@@ -15,6 +15,7 @@
 
 # Time complexity: O(m+n)
 # Space complexity: O(1) because s and t consist of only upper and lowercase alphabets, the maximum size of maps can be 52.
+
 
 def min_window(s: str, t: str) -> str:
     s_len = len(s)
@@ -28,7 +29,6 @@ def min_window(s: str, t: str) -> str:
         curr_window_freq_map[i] = 0
         t_freq_map[i] = t_freq_map.get(i, 0) + 1
 
-    
     start = 0
     min_window_len = float("inf")
     min_window_substr = ""
@@ -59,6 +59,7 @@ def check_freq(s_freq_map: dict[str, int], t_freq_map: dict[str, int]) -> bool:
             return False
     return True
 
+
 if __name__ == "__main__":
     inputs = [
         {"s": "cabwefgewcwaefgcf", "t": "cae"},
@@ -68,6 +69,6 @@ if __name__ == "__main__":
 
     for input in inputs:
         output = min_window(input["s"], input["t"])
-        print(f"s = {input["s"]}, t = {input["t"]}")
+        print(f"s = {input['s']}, t = {input['t']}")
         print(f"output = {output}")
         print()

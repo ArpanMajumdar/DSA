@@ -27,8 +27,8 @@ class LinkedList:
     def get_length(self, head):
         temp = head
         length = 0
-        while(temp):
-            length+=1
+        while temp:
+            length += 1
             temp = temp.next
         return length
 
@@ -41,7 +41,7 @@ class LinkedList:
                 ptr = ptr.next
                 p += 1
             return ptr
-    
+
     # __str__(self) method will display the elements of linked list.
     def __str__(self):
         result = ""

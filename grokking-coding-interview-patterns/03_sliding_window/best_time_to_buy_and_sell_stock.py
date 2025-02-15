@@ -17,16 +17,17 @@ def max_profit(prices: list[int]) -> int:
         # print(f"buy_price = {buy_price}, sell_price = {prices[i]}, profit = {profit}, max_profit = {max_profit}")
     return max_profit
 
+
 if __name__ == "__main__":
     inputs = [
-        {"prices": [7,1,5,3,6,4]},
+        {"prices": [7, 1, 5, 3, 6, 4]},
         {"prices": [10, 8, 6, 4, 2]},
-        {"prices": [10,4,11,1,5]},
-        {"prices": [7,7,6,6,6]},
+        {"prices": [10, 4, 11, 1, 5]},
+        {"prices": [7, 7, 6, 6, 6]},
     ]
 
     for input in inputs:
         output = max_profit(input["prices"])
-        print(f"prices = {input["prices"]}")
+        print(f"prices = {input['prices']}")
         print(f"output = {output}")
         print()

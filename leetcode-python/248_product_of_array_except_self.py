@@ -52,7 +52,7 @@ class Solution:
                 zero_indices.append(i)
         return zero_indices
 
-    # This solution uses the same result array for memoization of left and right instead of using two arrays. 
+    # This solution uses the same result array for memoization of left and right instead of using two arrays.
     def productExceptSelfOptimized(self, nums: List[int]) -> List[int]:
         n = len(nums)
         result = [1] * n

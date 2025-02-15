@@ -1,4 +1,3 @@
-
 def longest_repeating_character_replacement(s: str, k: int) -> int:
     n = len(s)
     longest_substr_len = 0
@@ -24,14 +23,16 @@ def find_max_freq(freq_map: dict):
 
 
 if __name__ == "__main__":
-    inputs = [{"s": "aabccbb", "k": 2},
-              {"s": "fzfzfz", "k": 6},
-              {"s": "xxxxx", "k": 1},
-              {"s": "lmno", "k": 2},
-              {"s": "n", "k":0}]
+    inputs = [
+        {"s": "aabccbb", "k": 2},
+        {"s": "fzfzfz", "k": 6},
+        {"s": "xxxxx", "k": 1},
+        {"s": "lmno", "k": 2},
+        {"s": "n", "k": 0},
+    ]
 
     for input in inputs:
         output = longest_repeating_character_replacement(input["s"], input["k"])
-        print(f"s = {input["s"]}, k = {input["k"]}")
+        print(f"s = {input['s']}, k = {input['k']}")
         print(f"output = {output}")
         print()

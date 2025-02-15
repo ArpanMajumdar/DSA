@@ -1,5 +1,5 @@
 # Problem: Given a string, input_str, return the length of the longest substring without repeating characters.
-# Constraints: 
+# Constraints:
 #   - 1 <= len(input_str) <= 10^5
 #   - input_str consists of English letters, digits, symbols, and spaces.
 
@@ -14,6 +14,7 @@
 # Time complexity: O(n)
 # Space complexity: O(1) because constant space is required for hashmap which is equal to the number of distinct characters.
 
+
 def find_longest_substring(input_str: str) -> int:
     n = len(input_str)
     char_idx_map = {}
@@ -25,20 +26,21 @@ def find_longest_substring(input_str: str) -> int:
         # print(f"start={start}, end = {end}, window = {window}, longest_window_len = {longest_window_len}, char_idx_map = {char_idx_map}")
         if input_str[end] not in char_idx_map or (
             input_str[end] in char_idx_map and char_idx_map[input_str[end]] < start
-        ): # character is not repeating in current window
+        ):  # character is not repeating in current window
             char_idx_map[input_str[end]] = end
-        else: # character is repeating in current window
+        else:  # character is repeating in current window
             current_window_len = end - start
             longest_window_len = max(current_window_len, longest_window_len)
             start = char_idx_map[input_str[end]] + 1
             char_idx_map[input_str[end]] = end
 
         # Handle the case when longest window is at the end of the string
-        if end == n-1:
+        if end == n - 1:
             current_window_len = end - start + 1
             longest_window_len = max(current_window_len, longest_window_len)
 
     return longest_window_len
+
 
 if __name__ == "__main__":
     inputs = [
@@ -51,6 +53,6 @@ if __name__ == "__main__":
 
     for input in inputs:
         output = find_longest_substring(input["input_str"])
-        print(f"input_str = {input["input_str"]}")
+        print(f"input_str = {input['input_str']}")
         print(f"output = {output}")
         print()

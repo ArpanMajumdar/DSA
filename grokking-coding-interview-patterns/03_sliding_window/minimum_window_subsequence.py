@@ -1,7 +1,7 @@
 def min_window(str1, str2):
     n1 = len(str1)
     n2 = len(str2)
-    min_window = float('inf')
+    min_window = float("inf")
     min_window_subseqence = ""
 
     for i in range(n1):
@@ -38,6 +38,6 @@ if __name__ == "__main__":
 
     for input in inputs:
         output = min_window(input["str1"], input["str2"])
-        print(f"str1 = {input["str1"]}, str2 = {input["str2"]}")
+        print(f"str1 = {input['str1']}, str2 = {input['str2']}")
         print(f"output = {output}")
         print()

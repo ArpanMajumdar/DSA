@@ -6,7 +6,7 @@ class Solution:
         s_freq = self.calc_char_freq(s)
         t_freq = self.calc_char_freq(t)
         return s_freq == t_freq
-    
+
     def calc_char_freq(self, s):
         s_freq = {}
         for char in s:
@@ -15,7 +15,8 @@ class Solution:
             else:
                 s_freq[char] = 1
         return s_freq
-    
+
+
 if __name__ == "__main__":
     sol = Solution()
     s1 = "anagram"

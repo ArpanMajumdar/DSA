@@ -6,7 +6,6 @@
 
 
 def is_palindrome(s):
-
     left = 0
     right = len(s) - 1
 
@@ -20,7 +19,6 @@ def is_palindrome(s):
 
 
 if __name__ == "__main__":
-
     inputs = ["racecar", "abab"]
 
     for input in inputs:

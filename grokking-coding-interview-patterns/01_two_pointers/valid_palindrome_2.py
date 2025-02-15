@@ -8,7 +8,7 @@ def is_palindrome(s):
             end -= 1
         else:
             return palindrome(s, start, end - 1) or palindrome(s, start + 1, end)
-        
+
     return True
 
 

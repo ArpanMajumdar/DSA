@@ -8,7 +8,6 @@ class Solution:
         curr_substr = 0
 
         while i < n and j < n:
-
             while j < n and s[j] not in char_set:
                 print(f"while 1: i = {i}, j = {j}")
                 char_set.add(s[j])

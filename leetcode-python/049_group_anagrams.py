@@ -17,7 +17,7 @@ class Solution:
         anagram_dict = {}
 
         for word in strs:
-            key = "".join(sorted(word)) 
+            key = "".join(sorted(word))
 
             if key in anagram_dict:
                 anagram_dict[key].append(word)
@@ -25,9 +25,10 @@ class Solution:
                 anagram_dict[key] = [word]
 
         return list(anagram_dict.values())
-    
+
+
 if __name__ == "__main__":
     sol = Solution()
-    strs = ["eat","tea","tan","ate","nat","bat"]
+    strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
     res = sol.groupAnagrams(strs)
     print(f"strs = {strs}, result = {res}")

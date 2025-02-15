@@ -1,5 +1,5 @@
 # Problem
-# We are given an array of closed intervals, intervals, where each interval has a start time and an end time. The input array is sorted with respect to the start times of each interval. 
+# We are given an array of closed intervals, intervals, where each interval has a start time and an end time. The input array is sorted with respect to the start times of each interval.
 # For example, intervals = [[1,4],[3,6],[7,9]]
 # Constraints
 # 1 <= intervals.length <= 10^3
@@ -29,25 +29,25 @@ def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
         interval = intervals[i]
         cur_interval_start, cur_interval_end = interval[0], interval[1]
         if cur_interval_start <= output[output_idx][1]:
-            output[output_idx][1] = max(output[output_idx][1], cur_interval_end) 
+            output[output_idx][1] = max(output[output_idx][1], cur_interval_end)
         else:
             output.append(interval.copy())
             output_idx += 1
 
     return output
 
+
 if __name__ == "__main__":
     inputs = [
-        {"intervals": [[1,6],[2,4]]},
-        {"intervals": [[1,8]]},
-        {"intervals": [[2,9],[3,5],[4,8]]},
-        {"intervals": [[2,4],[3,5],[4,5],[6,10],[12,14]]},
-        {"intervals": [[1,5],[4,6],[6,8],[11,15]]},
+        {"intervals": [[1, 6], [2, 4]]},
+        {"intervals": [[1, 8]]},
+        {"intervals": [[2, 9], [3, 5], [4, 8]]},
+        {"intervals": [[2, 4], [3, 5], [4, 5], [6, 10], [12, 14]]},
+        {"intervals": [[1, 5], [4, 6], [6, 8], [11, 15]]},
     ]
 
     for input in inputs:
         output = merge_intervals(input["intervals"])
-        print(f"intervals = {input["intervals"]}")
+        print(f"intervals = {input['intervals']}")
         print(f"output = {output}")
         print()
-

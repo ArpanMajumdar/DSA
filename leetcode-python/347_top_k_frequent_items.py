@@ -33,7 +33,7 @@ class Solution:
         for num in nums:
             freq_table[num] = freq_table.get(num, 0) + 1
 
-        # Create a heap using the freq as key. Extract k largest items from heap. 
+        # Create a heap using the freq as key. Extract k largest items from heap.
         top_k_items = heapq.nlargest(k, freq_table.items(), key=lambda x: x[1])
         return [item[0] for item in top_k_items]
 

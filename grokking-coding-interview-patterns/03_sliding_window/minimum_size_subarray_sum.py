@@ -7,7 +7,7 @@
 
 # Solution
 # 1. Intialize: min_window_size = inf, window_sum = 0
-# 2. Traverse the array using sliding window approach. 
+# 2. Traverse the array using sliding window approach.
 # 3. Expand the window until the window sum is less than target.
 # 4. Shrink the window to reduce the window size while window sum >= target.
 
@@ -41,14 +41,13 @@ def min_sub_array_len(target: int, nums: list[int]) -> int:
 
 if __name__ == "__main__":
     inputs = [
-        {"nums": [2,3,1,2,4,3], "target": 7},
-        {"nums": [1,1,1,1,1,3], "target": 11},
-        {"nums": [1,2,7,3,4,5], "target": 10},
+        {"nums": [2, 3, 1, 2, 4, 3], "target": 7},
+        {"nums": [1, 1, 1, 1, 1, 3], "target": 11},
+        {"nums": [1, 2, 7, 3, 4, 5], "target": 10},
     ]
 
     for input in inputs:
         output = min_sub_array_len(input["target"], input["nums"])
-        print(f"nums = {input["nums"]}, target = {input["target"]}")
+        print(f"nums = {input['nums']}, target = {input['target']}")
         print(f"output = {output}")
         print()
-
