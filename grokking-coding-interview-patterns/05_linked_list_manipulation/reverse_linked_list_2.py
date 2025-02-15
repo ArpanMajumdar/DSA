@@ -3,8 +3,15 @@ from typing import Optional
 from linked_list import LinkedList
 from linked_list_node import LinkedListNode
 
+# Problem
+# Given a singly linked list with n nodes and two positions, left and right, the objective is to reverse the nodes of the list from left to right. Return the modified list.
+# Constraints
+# 1 <= n <= 500
+# -5000 <= node.data <= 5000
+# 1 <= left <= right <= n
 
-def reverse_linked_list(head):
+
+def reverse_linked_list(head: Optional[LinkedListNode]) -> Optional[LinkedListNode]:
     prev, curr = None, head
     while curr:
         nxt = curr.next
@@ -15,8 +22,10 @@ def reverse_linked_list(head):
 
 
 def reverse_between(head: Optional[LinkedListNode], left: int, right: int):
+    # Handle base case
+    if head is None or left == right:
+        return head
 
-    # Replace this placeholder return statement with your code
     dummy = LinkedListNode(0)
     dummy.next = head
     left_prev_ptr, left_ptr, right_ptr, right_next_ptr = dummy, head, head, head.next
@@ -42,9 +51,36 @@ def reverse_between(head: Optional[LinkedListNode], left: int, right: int):
     return head
 
 
+def reverse_between_sol2(head: Optional[LinkedListNode], left: int, right: int):
+    # Handle base case
+    if head is None or left == right:
+        return head
+
+    # Create dummy node
+    dummy = LinkedListNode(0)
+    dummy.next = head
+
+    prev = dummy
+    for _ in range(left - 1):
+        if prev is not None:
+            prev = prev.next
+
+    curr = prev.next
+    print(f"prev = {prev.data}, curr = {curr.data}")
+
+    for _ in range(right - left):
+        next = curr.next
+        curr.next = next.next
+        next.next = prev.next
+        prev.next = next
+        print(f"prev = {prev.data}, curr = {curr.data}, next = {next.data}")
+
+    return dummy.next
+
+
 if __name__ == "__main__":
     ll1 = LinkedList()
-    ll1.create_linked_list([4, 2, 7, 8, 9, 0, 2])
-    head = reverse_between(ll1.head, left=3, right=7)
+    ll1.create_linked_list([3, 6, 7, 4, 2])
+    head = reverse_between_sol2(ll1.head, left=2, right=4)
     ll1.head = head
     print(ll1)

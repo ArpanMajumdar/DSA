@@ -37,3 +37,16 @@ class LinkedList:
                 result += ", "
         result += ""
         return result
+
+
+def print_list(head: Optional[LinkedListNode], prefix: str):
+    curr = head
+
+    print(f"{prefix}: ", end="")
+    while curr is not None:
+        if curr.next is None:
+            print(f"{curr.data}", end="")
+        else:
+            print(f"{curr.data} -> ", end="")
+        curr = curr.next
+    print()
